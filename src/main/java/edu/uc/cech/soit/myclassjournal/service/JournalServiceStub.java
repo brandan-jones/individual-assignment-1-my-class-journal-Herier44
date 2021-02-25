@@ -1,0 +1,23 @@
+package edu.uc.cech.soit.myclassjournal.service;
+
+import edu.uc.cech.soit.myclassjournal.dto.JournalEntry;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Service
+public class JournalServiceStub implements IJournalService {
+
+    List<JournalEntry> entryList = new ArrayList<>();
+
+    public void save(JournalEntry journalEntry){
+        entryList.add(journalEntry);
+    }
+
+    public List<JournalEntry> fetchAll() {
+        return entryList;
+    }
+
+}
